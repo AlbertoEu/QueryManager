@@ -1,21 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package querymanager;
 
-/**
- *
- * @author Admin
- */
-public class QueryManager {
+import Query.Query;
 
-    /**
-     * @param args the command line arguments
-     */
+public class QueryManager {
+    
+    private static Query querys;
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        new QueryManager().run();
     }
     
+    public void run() {
+        
+    }
 }
