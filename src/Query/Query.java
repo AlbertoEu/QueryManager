@@ -1,40 +1,44 @@
 package Query;
 
-import Interfaces.Data;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Query {
-    private List <String> querys;
+    private String query;
     private int nData;
     private String [] values = new String [nData];
     
-    public Query() {
-        this.querys = new ArrayList <String>();
+    public Query(String query) {
+        this.query = query;
+        nData = countSpaces();
     }
     
-    public int countSpaces(String query) {
+    public int countSpaces() {
         int spaces = 0;
         for(int i=0; i<query.length(); i++) {
             if(query.charAt(i)==' ') spaces++;
         }
         return spaces;
     }
-    
-    public boolean create(String query){
-        nData = this.countSpaces(query);
-        return querys.add(query);
+
+    public String getQuery() {
+        return query;
     }
-    
-    public boolean update(){
-        return true;
+
+    public void setQuery(String query) {
+        this.query = query;
     }
-    
-    public List<String> read(){
-        return new ArrayList();
+
+    public int getnData() {
+        return nData;
     }
-    
-    public boolean delete(){
-        return true;
+
+    public void setnData(int nData) {
+        this.nData = nData;
+    }
+
+    public String[] getValues() {
+        return values;
+    }
+
+    public void setValues(String[] values) {
+        this.values = values;
     }
 }
