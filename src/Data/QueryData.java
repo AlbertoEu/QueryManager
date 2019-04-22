@@ -30,4 +30,12 @@ public class QueryData implements Data {
         querys.remove(id);
         return true;
     }
+    
+    public void saveData() {
+        
+    }
+    
+    public void loadData() {
+        
+    }
 }

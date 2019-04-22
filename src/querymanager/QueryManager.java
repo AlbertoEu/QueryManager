@@ -1,12 +1,11 @@
 package querymanager;
 
-import Query.Query;
+import Data.QueryData;
 import User.User;
 
 public class QueryManager {
     
-    private static Query querys;
-    private static final User USUARIO_BASE = new User("jcardenas", "universal", "superAdmin");
+    private static QueryData querysData;
   
     public static void main(String[] args) {
         new QueryManager().run();
@@ -14,9 +13,5 @@ public class QueryManager {
     
     public void run() {
         
-    }
-    
-    public boolean createQuery() {
-     return true;   
     }
 }

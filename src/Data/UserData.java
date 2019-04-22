@@ -13,12 +13,12 @@ public class UserData implements Data {
        users = new <User> ArrayList(); 
     }
     
-    public boolean create(String username, String password, String role){
-        return users.add(new User(username, password, role));
+    public boolean create(String username, String password){
+        return users.add(new User(username, password, "admin"));
     }
     
-    public boolean update(int id, String updatedUsername, String updatedPassword, String updatedRole){
-        users.set(id, new User(updatedUsername, updatedPassword, updatedRole));
+    public boolean update(int id, String updatedUsername, String updatedPassword){
+        users.set(id, new User(updatedUsername, updatedPassword, "admin"));
         return true;
     }
     
@@ -31,5 +31,13 @@ public class UserData implements Data {
     public boolean delete(int id){
         users.remove(id);
         return true;
+    }
+    
+    public void saveData() {
+        
+    }
+    
+    public void loadData() {
+        
     }
 }
