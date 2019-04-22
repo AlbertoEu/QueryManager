@@ -1,10 +1,11 @@
 package Data;
 
+import Interfaces.Data;
 import Query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QueryData {
+public class QueryData implements Data {
     
     private List<Query> querys;
     
