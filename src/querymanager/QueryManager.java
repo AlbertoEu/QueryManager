@@ -15,4 +15,8 @@ public class QueryManager {
     public void run() {
         
     }
+    
+    public boolean createQuery() {
+     return true;   
+    }
 }
