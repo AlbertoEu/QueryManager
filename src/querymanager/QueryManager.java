@@ -1,17 +1,16 @@
 package querymanager;
 
-import Data.QueryData;
-import User.User;
+import Screens.LoginScreen;
 
 public class QueryManager {
-    
-    private static QueryData querysData;
+
+    private static LoginScreen loginScreen;
   
     public static void main(String[] args) {
         new QueryManager().run();
     }
     
     public void run() {
-        
+        loginScreen = new LoginScreen();
     }
 }

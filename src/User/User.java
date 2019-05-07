@@ -5,6 +5,15 @@ public class User {
     private String password;
     private String role;
     
+    
+    //For admin user
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.role = "admin";
+    }
+    
+    //For customized user
     public User(String username, String password, String role) {
         this.username = username;
         this.password = password;

@@ -14,11 +14,11 @@ public class UserData implements Data {
     }
     
     public boolean create(String username, String password){
-        return users.add(new User(username, password, "admin"));
+        return users.add(new User(username, password));
     }
     
     public boolean update(int id, String updatedUsername, String updatedPassword){
-        users.set(id, new User(updatedUsername, updatedPassword, "admin"));
+        users.set(id, new User(updatedUsername, updatedPassword));
         return true;
     }
     
