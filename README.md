@@ -15,4 +15,4 @@ Solución: Se generó un programa en Java con interfaz gráfica y toda una lógi
 Arquitectura:
 ![alt text](https://github.com/AlbertoEu/QueryManager/blob/Pantallas/src/Images/Arquitectura.png)
 
-Tabla de contenidos (ToC):https://github.com/AlbertoEu/QueryManager/wiki
+Tabla de contenidos (ToC): https://github.com/AlbertoEu/QueryManager/wiki
