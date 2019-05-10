@@ -1,4 +1,5 @@
 # QueryManager
+### Video del programa en funcionamiento: https://youtu.be/MDZIarSoegQ
 ## Resumen Ejecutivo:
 Descripción: Programa que maneja querys de manera gráfica, login/logout, creación y manejo de cuentas, creación y manejo de querys, configuración de conexión a base de datos, y uso de querys.
 
@@ -16,5 +17,3 @@ Arquitectura:
 ![alt text](https://github.com/AlbertoEu/QueryManager/blob/Pantallas/src/Images/Arquitectura.png)
 
 Tabla de contenidos (ToC): https://github.com/AlbertoEu/QueryManager/wiki
-
-Video del programa en funcionamiento: 
