@@ -11,6 +11,7 @@ public class UserData implements Data {
     
     public UserData() {
        users = new <User> ArrayList(); 
+       users.add(new User("prueba", "1234"));
     }
     
     public boolean create(String username, String password){

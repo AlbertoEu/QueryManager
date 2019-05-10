@@ -16,8 +16,8 @@ import javax.swing.JTextField;
 public class LoginFrame extends JFrame {
     
     private LogUser login;                 
-    private JButton jButton1;
-    private JButton jButton2;
+    private JButton loginButton;
+    private JButton forgotData;
     private JPasswordField password;
     private JLabel passwordText;
     private JTextField username;
@@ -37,12 +37,11 @@ public class LoginFrame extends JFrame {
         passwordText = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        loginButton = new javax.swing.JButton();
+        forgotData = new javax.swing.JButton();
         
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        setLocationRelativeTo(null);
         setResizable(false);
+        
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -63,20 +62,32 @@ public class LoginFrame extends JFrame {
         passwordText.setText("Password");
         passwordText.setAlignmentY(0.0F);
 
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginButton.setText("Login");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginActionPerformed(evt);
             }
         });
 
-        jButton2.setText("No recuerdo mis datos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        forgotData.setText("No recuerdo mis datos");
+        forgotData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                forgotDataActionPerformed(evt);
             }
         });
-
+        
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterActionPerformed(evt);
+            }
+        });
+        
+        password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterActionPerformed(evt);
+            }
+        });
+        
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,14 +98,14 @@ public class LoginFrame extends JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(passwordText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(usernameText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton1))
+                    .addComponent(loginButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
                     .addComponent(password)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
+                        .addComponent(forgotData)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -110,24 +121,32 @@ public class LoginFrame extends JFrame {
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(loginButton)
+                    .addComponent(forgotData))
                 .addGap(24, 24, 24))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>                       
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    
+    private void enterActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        tryLogin();
+    }  
+    
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        tryLogin();
+    }  
+    
+    private void forgotDataActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        JOptionPane.showMessageDialog(this, "Contactar a Jesús Cárdenas para recuperar usuario");
+    }                                        
+    
+    private void tryLogin() {
         if(login.login(username.getText(), password.getText())) {
             dispose();
             HomeScreen homeScreen = new HomeScreen(login);
         }
         else JOptionPane.showMessageDialog(this, "Datos incorrectos, por favor intente de nuevo");
-    }  
-    
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        JOptionPane.showMessageDialog(this, "Contactar a Jesús Cárdenas para recuperar usuario");
-    }                                        
-
+    }
 }
