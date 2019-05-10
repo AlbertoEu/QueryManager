@@ -1,7 +1,7 @@
 package Screens.Frames;
 
 import Access.LogUser;
-import Screens.HomeScreen;
+import Screens.LoginScreen;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
@@ -13,9 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class LoginFrame extends JFrame {
-    
-    private LogUser login;                 
+public class HomeFrame extends JFrame {
+    private LogUser session;                 
     private JButton jButton1;
     private JButton jButton2;
     private JPasswordField password;
@@ -23,9 +22,9 @@ public class LoginFrame extends JFrame {
     private JTextField username;
     private JLabel usernameText;
     
-    public LoginFrame() {
-        super("Query Manager - Login");
-        login = new LogUser();
+    public HomeFrame(LogUser session) {
+        super("Query Manager - Home");
+        session = session;
         initComponents();
     }
     
@@ -54,7 +53,6 @@ public class LoginFrame extends JFrame {
                 }
             }
         });
-        
         setVisible(true);
                 
         usernameText.setText("Username");
@@ -119,15 +117,14 @@ public class LoginFrame extends JFrame {
     }// </editor-fold>                       
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        if(login.login(username.getText(), password.getText())) {
-            dispose();
-            HomeScreen homeScreen = new HomeScreen(login);
+        if(session.login(username.getText(), password.getText())) {
+            JOptionPane.showMessageDialog(this, "Pantalla 2: "+username.getText());
+            
         }
         else JOptionPane.showMessageDialog(this, "Datos incorrectos, por favor intente de nuevo");
     }  
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         JOptionPane.showMessageDialog(this, "Contactar a Jesús Cárdenas para recuperar usuario");
-    }                                        
-
+    }
 }

@@ -35,6 +35,31 @@ public class LogUser {
     }
     
     public void logout() {
-        
+        logedUser = null;
+        usersAccess = false;
+    }
+
+    public static User getLogedUser() {
+        return logedUser;
+    }
+
+    public static void setLogedUser(User logedUser) {
+        LogUser.logedUser = logedUser;
+    }
+
+    public static UserData getUsersData() {
+        return usersData;
+    }
+
+    public static void setUsersData(UserData usersData) {
+        LogUser.usersData = usersData;
+    }
+
+    public static boolean isUsersAccess() {
+        return usersAccess;
+    }
+
+    public static void setUsersAccess(boolean usersAccess) {
+        LogUser.usersAccess = usersAccess;
     }
 }

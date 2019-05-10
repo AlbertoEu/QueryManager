@@ -1,12 +1,16 @@
 package Screens;
 
+import Access.LogUser;
 import Interfaces.Screen;
-import Screens.Frames.LoginFrame;
+import Screens.Frames.HomeFrame;
 import java.awt.EventQueue;
 
-public class LoginScreen implements Screen {
+public class HomeScreen implements Screen {
     
-    public LoginScreen() {
+    private LogUser session;
+    
+    public HomeScreen(LogUser session) {
+        this.session=session;
         loadScreen();
     }
     
@@ -33,11 +37,12 @@ public class LoginScreen implements Screen {
             @Override
             public void run() {
                 try {
-                new LoginFrame();
+                new HomeFrame(session);
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
             }  
         });
     }
+    
 }
