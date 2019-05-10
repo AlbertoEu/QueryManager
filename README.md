@@ -14,4 +14,5 @@ Solución: Se generó un programa en Java con interfaz gráfica y toda una lógi
 
 Arquitectura:
 ![alt text](https://github.com/AlbertoEu/QueryManager/blob/Pantallas/src/Images/Arquitectura.png)
-Tabla de contenidos (ToC) con enlaces o a la sección wiki dentro del repositorio o algún medio externo como ReadTheDocs.io
+
+Tabla de contenidos (ToC):https://github.com/AlbertoEu/QueryManager/wiki
