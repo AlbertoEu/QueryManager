@@ -13,5 +13,5 @@ Actualmente este proceso se hacía de la siguiente manera:
 Solución: Se generó un programa en Java con interfaz gráfica y toda una lógica detrás que permite un uso simple e intuitivo para los empleados, con accesos controlados y conexión directa a la base de datos (se eliminan intermediarios).
 
 Arquitectura:
-![alt text](https://raw.githubusercontent.com/AlbertoEu/QueryManager/blob/Pantallas/src/Images/Arquitectura.png)
+![alt text](https://github.com/AlbertoEu/QueryManager/blob/Pantallas/src/Images/Arquitectura.png)
 Tabla de contenidos (ToC) con enlaces o a la sección wiki dentro del repositorio o algún medio externo como ReadTheDocs.io
