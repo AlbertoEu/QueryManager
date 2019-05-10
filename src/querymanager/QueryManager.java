@@ -1,22 +1,16 @@
 package querymanager;
 
-import Query.Query;
-import User.User;
+import Screens.LoginScreen;
 
 public class QueryManager {
-    
-    private static Query querys;
-    private static final User USUARIO_BASE = new User("jcardenas", "universal", "superAdmin");
+
+    private static LoginScreen loginScreen;
   
     public static void main(String[] args) {
         new QueryManager().run();
     }
     
     public void run() {
-        
-    }
-    
-    public boolean createQuery() {
-     return true;   
+        loginScreen = new LoginScreen();
     }
 }

@@ -22,12 +22,24 @@ public class QueryData implements Data {
         return true;
     }
     
+    @Override
     public List<Query> read(){
         return querys;
     }
     
+    @Override
     public boolean delete(int id){
         querys.remove(id);
         return true;
+    }
+    
+    @Override
+    public void saveData() {
+        
+    }
+    
+    @Override
+    public void loadData() {
+        
     }
 }
