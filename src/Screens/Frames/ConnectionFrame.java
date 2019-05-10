@@ -157,7 +157,7 @@ public class ConnectionFrame extends JFrame {
         jPanel1.setBackground(new java.awt.Color(219, 251, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Bienvenido,");
+        jLabel1.setText("Bienvenido, "+session.getLogedUser().getUsername());
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
