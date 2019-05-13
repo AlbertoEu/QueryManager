@@ -1,7 +1,6 @@
 package Data;
 
 import Interfaces.Data;
-import Query.Query;
 import java.util.ArrayList;
 import java.util.List;
 

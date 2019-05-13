@@ -1,7 +1,6 @@
 package Data;
 
 import Interfaces.Data;
-import User.User;
 import java.util.ArrayList;
 import java.util.List;
 

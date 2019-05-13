@@ -1,7 +1,7 @@
 package Access;
 
 import Data.UserData;
-import User.User;
+import Data.User;
 
 public class LogUser {
     
