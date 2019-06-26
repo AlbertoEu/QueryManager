@@ -56,8 +56,6 @@ public class ConnectionFrame extends JFrame {
         initComponents();
     }
     
-    
-    
     @SuppressWarnings("unchecked")
     
     private void initComponents() {
@@ -93,7 +91,6 @@ public class ConnectionFrame extends JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         
-        setResizable(false);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -105,8 +102,6 @@ public class ConnectionFrame extends JFrame {
                 }
             }
         });
-        
-        setVisible(true);
         
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -162,8 +157,6 @@ public class ConnectionFrame extends JFrame {
             jFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(219, 251, 255));
 
@@ -304,6 +297,7 @@ public class ConnectionFrame extends JFrame {
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText("Usuarios");
+        if(!session.getLogedUser().getRole().equals("SuperAdmin")) jMenuItem1.setEnabled(false);
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -357,10 +351,12 @@ public class ConnectionFrame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTabbedPane1))
         );
-
+        
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
+        setResizable(false);
+        setVisible(true);
+    }                     
 
     //Usuario
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {

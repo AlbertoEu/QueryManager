@@ -108,8 +108,6 @@ public class HomeFrame extends JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         
-        setResizable(false);
-        
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -121,8 +119,6 @@ public class HomeFrame extends JFrame {
                 }
             }
         });
-        
-        setVisible(true);
         
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -438,7 +434,9 @@ public class HomeFrame extends JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
+        setResizable(false);
+        setVisible(true);
+    }                      
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:

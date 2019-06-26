@@ -40,8 +40,6 @@ public class LoginFrame extends JFrame {
         loginButton = new javax.swing.JButton();
         forgotData = new javax.swing.JButton();
         
-        setResizable(false);
-        
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -53,8 +51,6 @@ public class LoginFrame extends JFrame {
                 }
             }
         });
-        
-        setVisible(true);
                 
         usernameText.setText("Username");
         usernameText.setAlignmentY(0.0F);
@@ -128,7 +124,9 @@ public class LoginFrame extends JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>                       
+        setResizable(false);
+        setVisible(true);
+    }                       
     
     private void enterActionPerformed(java.awt.event.ActionEvent evt) {                                            
         tryLogin();

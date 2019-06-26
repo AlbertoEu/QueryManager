@@ -86,7 +86,6 @@ public class AccountsFrame extends JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         
-        setResizable(false);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -98,7 +97,6 @@ public class AccountsFrame extends JFrame {
                 }
             }
         });
-        setVisible(true);
         
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -368,6 +366,8 @@ public class AccountsFrame extends JFrame {
 
         pack();
         setLocationRelativeTo(null);
+        setResizable(false);
+        setVisible(true);
     }                        
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
