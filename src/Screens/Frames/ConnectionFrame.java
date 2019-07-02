@@ -409,8 +409,10 @@ public class ConnectionFrame extends JFrame {
             connection.disconnect();
         } catch (ClassNotFoundException ex) {
             connection.setConnectionWorks(false);
+            Logger.getLogger(ConnectionFrame.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             connection.setConnectionWorks(false);
+            Logger.getLogger(ConnectionFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(connection.isConnectionWorks()) JOptionPane.showMessageDialog(null, "Conexión establecida correctamente");
         else JOptionPane.showMessageDialog(null, "No se pudo conectar a la Base de Datos, intente nuevamente");

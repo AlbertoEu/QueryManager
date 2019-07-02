@@ -1,24 +1,28 @@
 package Data;
-import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import com.mysql.cj.jdbc.MysqlDataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ConnectionDB {
-    private final String driverClass;
     private String connectionURL;
     private String database;
     private String usernameDB;
     private String passwordDB;
     private Connection connection;
+    MysqlDataSource dataSource;
     private Statement statement;
     private boolean connectionWorks;
 
     public ConnectionDB() {
-        this.driverClass = "com.mysql.jdbc.Driver";
+        //this.driverClass = "com.mysql.cj.jdbc.Driver";
+        dataSource = new MysqlDataSource();
     }
     
     public ConnectionDB(String connectionURL, String database, String usernameDB, String passwordDB) {
-        this.driverClass = "com.mysql.jdbc.Driver";
+        //this.driverClass = "com.mysql.cj.jdbc.Driver";
+        dataSource = new MysqlDataSource();
         this.connectionURL = connectionURL;
         this.database = database;
         this.usernameDB = usernameDB;
@@ -26,14 +30,21 @@ public class ConnectionDB {
     }
     
     public void connect() throws ClassNotFoundException, SQLException {
-        Class.forName(driverClass);
-        
-        connection = DriverManager.getConnection("jdbc:mysql://"+connectionURL+"/"+database, usernameDB, passwordDB);
+        dataSource.setUser(usernameDB);
+        dataSource.setPassword(passwordDB);
+        dataSource.setCharacterEncoding("UTF-8");
+        dataSource.setServerTimezone("UTC");
+        dataSource.setURL("jdbc:mysql://"+connectionURL+"/"+database);
+        connection = dataSource.getConnection();
+        //Class.forName(driverClass);
+        //connection = DriverManager.getConnection("jdbc:mysql://"+connectionURL+"/"+database, usernameDB, passwordDB);
     }
     
     public void runQuery(Query queryToRun) throws SQLException {
         statement=connection.createStatement(); 
-        ResultSet result=statement.executeQuery(queryToRun.getCompletedQuery()); 
+        ResultSet result=statement.executeQuery(queryToRun.getCompletedQuery());
+        result.close();
+        statement.close();
     }
     
     public void disconnect() throws SQLException {
