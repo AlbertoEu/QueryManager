@@ -8,8 +8,6 @@ import Screens.LoginScreen;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -409,12 +407,10 @@ public class ConnectionFrame extends JFrame {
             connection.disconnect();
         } catch (ClassNotFoundException ex) {
             connection.setConnectionWorks(false);
-            Logger.getLogger(ConnectionFrame.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             connection.setConnectionWorks(false);
-            Logger.getLogger(ConnectionFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if(connection.isConnectionWorks()) JOptionPane.showMessageDialog(null, "Conexión establecida correctamente");
-        else JOptionPane.showMessageDialog(null, "No se pudo conectar a la Base de Datos, intente nuevamente");
+        if(connection.isConnectionWorks()) JOptionPane.showMessageDialog(null, "Conexión establecida correctamente", "Conexión establecida", 1);
+        else JOptionPane.showMessageDialog(null, "No se pudo conectar a la base de datos, intente nuevamente", "Error en la conexión", 0);
     }
 }

@@ -2,8 +2,6 @@ package Screens.Frames;
 
 import Access.LogUser;
 import Screens.HomeScreen;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
@@ -145,6 +143,6 @@ public class LoginFrame extends JFrame {
             dispose();
             HomeScreen homeScreen = new HomeScreen(login);
         }
-        else JOptionPane.showMessageDialog(this, "Datos incorrectos, por favor intente de nuevo");
+        else JOptionPane.showMessageDialog(this, "Datos incorrectos, por favor intente de nuevo", "Datos incorrectos", 0);
     }
 }

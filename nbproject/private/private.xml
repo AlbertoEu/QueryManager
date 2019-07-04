@@ -3,16 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Data/ConnectionDB.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Screens/Frames/LoginFrame.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Screens/Frames/ConnectionFrame.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Screens/Frames/HomeFrame.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Screens/LoginScreen.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Data/User.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Data/UserData.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Screens/test.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/querymanager/QueryManager.java</file>
-            <file>file:/home/ste017/NetBeansProjects/QueryManager/src/Screens/Frames/AccountsFrame.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Data/ConnectionDB.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/Frames/AccountsFrame.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/LoginScreen.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/Frames/LoginFrame.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/querymanager/QueryManager.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Access/LogUser.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Interfaces/Data.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/Frames/HomeFrame.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/ConnectionScreen.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/test.java</file>
+            <file>file:/C:/Users/Admin/Desktop/QueryManager/src/Screens/Frames/ConnectionFrame.java</file>
         </group>
     </open-files>
 </project-private>
